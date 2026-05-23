@@ -4,14 +4,14 @@
 
 ## Skills
 
-| Skill | Author | What it does |
-|---|---|---|
-| `clarify` | https://github.com/owainlewis/ | Turns a vague or messy ask into a clean, self-contained prompt. |
-| `design-doc` | https://github.com/owainlewis/ | Writes a lightweight architecture design doc before implementation. |
-| `spec` | https://github.com/owainlewis/ | Writes requirements and technical design before coding. |
-| `plan` | https://github.com/owainlewis/ | Breaks a spec, brief, or request into agent-sized tasks. |
-| `refactor` | https://github.com/owainlewis/ | Simplifies existing code without changing behavior. |
-| `frontend-svelte` | https://github.com/gdewitte | Builds distinctive, production-grade Svelte interfaces. |
+| Skill | What it does |
+|---|---|
+| `clarify` | Turns a vague or messy ask into a clean, self-contained prompt. |
+| `design-doc` | Writes a lightweight architecture design doc before implementation. |
+| `spec` | Writes requirements and technical design before coding. |
+| `plan` | Breaks a spec, brief, or request into agent-sized tasks. |
+| `refactor` | Simplifies existing code without changing behavior. |
+| `frontend-svelte` | Builds distinctive, production-grade Svelte interfaces. |
 
 ## Install
 
@@ -65,7 +65,6 @@ Create a directory under `skills/` with a `SKILL.md` file:
 ---
 name: skill-name
 description: "What this skill does and when to use it."
-author: "https://github.com/example"
 ---
 
 # Skill instructions
