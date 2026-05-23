@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frontend Svelte"
+  short_description: "Design polished Svelte interfaces"
+  default_prompt: "Use $frontend-svelte to build a polished Svelte or SvelteKit interface."
