@@ -7,11 +7,15 @@
 | Skill | What it does |
 |---|---|
 | `clarify` | Turns a vague or messy ask into a clean, self-contained prompt. |
+| `commit-message` | Drafts concise commit messages with a conventional header and optional structured body. |
 | `design-doc` | Writes a lightweight architecture design doc before implementation. |
+| `explain-visually` | Creates a visual HTML explanation of a repo, spec, PR, architecture, or concept. |
 | `spec` | Writes requirements and technical design before coding. |
 | `plan` | Breaks a spec, brief, or request into agent-sized tasks. |
 | `refactor` | Simplifies existing code without changing behavior. |
+| `frontend-skill` | Guides visually strong landing pages, websites, apps, prototypes, demos, and game UIs. |
 | `frontend-svelte` | Builds distinctive, production-grade Svelte interfaces. |
+| `uncodixfy` | Removes generic AI UI patterns from frontend work. |
 
 ## Install
 
