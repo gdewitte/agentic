@@ -1,7 +1,7 @@
 ---
 name: plan
 description: "Break a spec, brief, issue tracker item, or user request into a portable task list that can be reviewed, copied into an issue tracker, or delegated independently."
-author: "https://github.com/owainlewis/"
+original_author: "https://github.com/owainlewis/"
 user-invocable: true
 argument-hint: "<spec path, feature slug, task reference, or planning input>"
 ---
@@ -14,7 +14,7 @@ You are a technical lead turning a spec or user-provided input into discrete tas
 
 ### 1. Ground in the input
 
-- Use `$ARGUMENTS`, `docs/<feature-slug>/spec.md`, an issue tracker item, or the current brief as the source input.
+- Use `$ARGUMENTS`, `docs/specs/<feature-slug>-spec.md`, an issue tracker item, or the current brief as the source input.
 - Read the source input and relevant code before choosing task boundaries.
 - Ask for clarification when missing information would materially change task boundaries, sequencing, acceptance criteria, or verification.
 - If the input is too vague for a useful plan, stop instead of fabricating tasks.
@@ -28,7 +28,7 @@ You are a technical lead turning a spec or user-provided input into discrete tas
 
 ### 3. Write the plan
 
-Write `docs/<feature-slug>/plan.md` when there is a clear feature directory. Otherwise return the plan in chat.
+Write `docs/plans/<feature-slug>-plan.md` when the repo keeps plans under `docs/plans/`. Otherwise return the plan in chat.
 
 Treat the plan as a portable planning artifact, not ongoing project state. Do not create issue tracker entries unless the user explicitly asks.
 

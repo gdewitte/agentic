@@ -1,7 +1,7 @@
 ---
 name: design-doc
 description: "Write a lightweight technical design document for ambiguous or consequential architecture decisions before implementation."
-author: "https://github.com/owainlewis/"
+original_author: "https://github.com/owainlewis/"
 user-invocable: true
 argument-hint: "<system, feature, architecture question, repo path, or design brief>"
 ---

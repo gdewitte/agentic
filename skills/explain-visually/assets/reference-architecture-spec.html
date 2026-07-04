@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lorem ipsum — visual skeleton</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#f7f2e8;--ink:#182320;--muted:#69736e;--rust:#bd5b36;--rust-soft:#f1d4c7;--teal:#2d7d78;--teal-soft:#d7e8e4;--line:#cfc8bb;--card:#fcfaf5;--slate:#31413d}
+    html{scroll-behavior:smooth} body{font-family:"IBM Plex Sans","Avenir Next","Helvetica Neue",sans-serif;background:var(--paper);color:var(--ink)}
+    *{box-sizing:border-box;min-width:0}.display{font-family:inherit;font-weight:780;letter-spacing:-.065em}.eyebrow{letter-spacing:.15em;text-transform:uppercase;font-size:.72rem;font-weight:700;color:var(--rust)}
+    .hairline{border-color:var(--line)}.paper-card{background:var(--card);border:1px solid var(--line)}.ink{color:var(--ink)}.muted{color:var(--muted)}.rust{color:var(--rust)}.teal{color:var(--teal)}
+    .bg-rust{background:var(--rust)}.bg-teal{background:var(--teal)}.bg-rust-soft{background:var(--rust-soft)}.bg-teal-soft{background:var(--teal-soft)}
+    .section-number{font-family:inherit;font-weight:780;letter-spacing:-.08em;color:var(--rust);font-size:4.5rem;line-height:.85}
+    code{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.82em;background:#eee8dc;border:1px solid #ddd3c4;border-radius:.35rem;padding:.08rem .3rem;overflow-wrap:anywhere}
+    .mono{font-family:"IBM Plex Mono",ui-monospace,monospace}.codeblock{background:#20302d;color:#eef4ef;border-radius:1rem}
+    .shadow-paper{box-shadow:0 18px 44px rgba(45,38,25,.08)}.dot-grid{background-image:radial-gradient(rgba(49,65,61,.16) 1px,transparent 1px);background-size:14px 14px}
+    .table-wrap{overflow-x:auto}.contract-table{min-width:1380px;border-collapse:collapse}.contract-table th{position:sticky;top:0;background:#20302d;color:#f7f2e8;z-index:2}.contract-table td,.contract-table th{padding:1rem;border-bottom:1px solid #ddd3c4;vertical-align:top}.contract-table tbody tr:nth-child(even){background:#f8f4ec}.contract-table tbody tr:hover{background:#f1e9dc}.contract-table th:first-child,.contract-table td:first-child{position:sticky;left:0}.contract-table td:first-child{background:inherit}.contract-table th:first-child{z-index:3}
+    .wrap{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:170px 1fr;gap:0 40px;padding:0 40px}.wrap>*,.main>*{min-width:0}.main{min-width:0}.toc{position:sticky;top:24px;align-self:start;padding:28px 0;grid-row:1/-1;max-height:calc(100dvh - 48px);overflow-y:auto}.toc-title{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--muted);padding:0 0 10px;margin-bottom:8px;border-bottom:1px solid var(--line)}.toc a{display:block;font-size:11px;color:var(--muted);text-decoration:none;padding:6px 8px;border-radius:5px;border-left:2px solid transparent;transition:all .15s;line-height:1.4;margin-bottom:1px}.toc a:hover{color:var(--ink);background:#eee8dc}.toc a.active{color:var(--ink);border-left-color:var(--rust);font-weight:700}.toc-note{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font-size:11px;line-height:1.55;color:var(--muted)}.sec-head{scroll-margin-top:30px}
+    @media(max-width:1000px){.wrap{grid-template-columns:1fr;padding:0 24px}.toc{position:sticky;top:0;z-index:200;max-height:none;display:flex;gap:4px;align-items:center;overflow-x:auto;-webkit-overflow-scrolling:touch;background:var(--paper);border-bottom:1px solid var(--line);padding:10px 0;margin:0 -24px;padding-left:24px;padding-right:24px;grid-row:auto}.toc::-webkit-scrollbar{display:none}.toc-title,.toc-note{display:none}.toc a{white-space:nowrap;flex-shrink:0;border-left:none;border-bottom:2px solid transparent;border-radius:4px 4px 0 0;padding:6px 10px;font-size:10px}.toc a.active{border-left:none;border-bottom-color:var(--rust);background:#eee8dc}.main{padding-top:20px}.sec-head{scroll-margin-top:58px}}
+    @media(max-width:768px){.section-number{font-size:3.25rem}.diagram-scroll{overflow-x:auto;padding-bottom:.4rem}.diagram-scroll svg{min-width:690px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <aside class="toc">
+      <div class="toc-title">Lorem ipsum</div>
+      <a class="active" href="#model">1. Lorem ipsum</a>
+      <a href="#flow">2. Dolor sit amet</a>
+      <a href="#contract">3. Consectetur</a>
+      <a href="#guardrails">4. Adipiscing elit</a>
+      <div class="toc-note"><strong class="ink">Lorem</strong><br><span class="mono" style="overflow-wrap:anywhere">lorem/ipsum/dolor/sit-amet.md</span></div>
+    </aside>
+    <main class="main">
+    <section class="min-h-[86vh] flex items-center px-6 md:px-12 py-16 md:py-24">
+      <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-[1.08fr_.92fr] gap-12 lg:gap-20 items-center">
+        <div>
+          <p class="eyebrow mb-6">Lorem ipsum dolor</p>
+          <h1 class="display text-6xl md:text-7xl leading-[.92] tracking-tight max-w-4xl">Lorem ipsum dolor.<br><span class="rust">Sit amet consectetur.</span></h1>
+          <p class="mt-7 text-xl md:text-2xl leading-snug max-w-2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="mt-5 text-base md:text-lg muted max-w-xl leading-relaxed">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          <div class="mt-9 flex flex-wrap gap-3"><a href="#model" class="px-5 py-3 rounded-full bg-rust text-white font-semibold text-sm">Lorem ipsum ↓</a><span class="px-5 py-3 rounded-full border hairline text-sm">Dolor sit amet</span></div>
+        </div>
+        <div class="relative">
+        <div class="absolute -inset-5 rounded-[2rem] dot-grid opacity-60"></div>
+          <div class="relative paper-card rounded-[1.5rem] p-5 md:p-7 shadow-paper">
+            <div class="flex items-center justify-between mb-6"><span class="text-sm font-semibold">Lorem ipsum dolor</span><span class="w-2.5 h-2.5 rounded-full bg-teal"></span></div>
+            <svg viewBox="0 0 560 440" class="w-full h-auto" role="img" aria-label="Lorem ipsum dolor sit amet">
+              <defs><marker id="arrowHero" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" fill="#69736e"></path></marker></defs>
+              <rect x="178" y="24" width="204" height="74" rx="18" fill="#f1d4c7" stroke="#bd5b36" stroke-width="2"/><text x="280" y="52" text-anchor="middle" dominant-baseline="middle" font-size="16" font-weight="700" fill="#182320">Lorem ipsum</text><text x="280" y="76" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#69736e">dolor sit amet</text>
+              <path d="M280 98 L280 144" stroke="#69736e" stroke-width="2" marker-end="url(#arrowHero)"/>
+              <rect x="150" y="148" width="260" height="82" rx="18" fill="#fcfaf5" stroke="#31413d" stroke-width="2"/><text x="280" y="177" text-anchor="middle" dominant-baseline="middle" font-size="16" font-weight="700" fill="#182320">Consectetur adipiscing</text><text x="280" y="203" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#69736e">elit · sed do · eiusmod</text>
+              <path d="M230 230 C230 267 135 266 135 302" fill="none" stroke="#69736e" stroke-width="2" marker-end="url(#arrowHero)"/><path d="M330 230 C330 267 425 266 425 302" fill="none" stroke="#69736e" stroke-width="2" marker-end="url(#arrowHero)"/>
+              <rect x="24" y="306" width="220" height="102" rx="18" fill="#d7e8e4" stroke="#2d7d78" stroke-width="2"/><text x="134" y="335" text-anchor="middle" dominant-baseline="middle" font-size="15" font-weight="700" fill="#182320">Lorem ipsum</text><text x="134" y="360" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#31413d">dolor sit amet</text><text x="134" y="383" text-anchor="middle" dominant-baseline="middle" font-size="11" fill="#2d7d78">consectetur elit</text>
+              <rect x="316" y="306" width="220" height="102" rx="18" fill="#f1d4c7" stroke="#bd5b36" stroke-width="2"/><text x="426" y="335" text-anchor="middle" dominant-baseline="middle" font-size="15" font-weight="700" fill="#182320">Dolor sit</text><text x="426" y="360" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#31413d">amet consectetur</text><text x="426" y="383" text-anchor="middle" dominant-baseline="middle" font-size="11" fill="#bd5b36">adipiscing elit</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="model" class="sec-head px-6 md:px-12 py-20 md:py-28 border-t hairline">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-[.35fr_1fr] gap-8 md:gap-16 mb-12"><div><span class="section-number">01</span></div><div><p class="eyebrow mb-4">Lorem ipsum</p><h2 class="display text-5xl md:text-6xl leading-none tracking-tight">Lorem ipsum <em>dolor sit?</em><br>Sed do <em>eiusmod?</em></h2><p class="mt-6 text-lg muted max-w-3xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p></div></div>
+        <div class="grid lg:grid-cols-2 gap-5">
+          <article class="paper-card rounded-3xl p-7 md:p-9"><div class="flex items-start justify-between gap-4"><div><p class="eyebrow mb-3">Lorem ipsum</p><h3 class="text-2xl font-semibold tracking-tight">Dolor sit amet</h3></div><span class="text-3xl rust">×</span></div><div class="mt-8 rounded-2xl bg-[#f5ece4] p-5"><div class="text-xs font-semibold muted mb-3">LOREM IPSUM DOLOR</div><div class="mono text-sm leading-7"><span class="rust">lorem</span>="ipsum..."<br><span class="rust">dolor</span>="sit amet..."<br><span class="rust">consectetur</span>="elit..."</div></div><p class="mt-6 muted leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p></article>
+          <article class="paper-card rounded-3xl p-7 md:p-9 border-2" style="border-color:var(--teal)"><div class="flex items-start justify-between gap-4"><div><p class="eyebrow mb-3" style="color:var(--teal)">Lorem ipsum</p><h3 class="text-2xl font-semibold tracking-tight">Dolor sit amet</h3></div><span class="text-3xl teal">✓</span></div><div class="mt-8 grid sm:grid-cols-2 gap-3"><div class="rounded-2xl bg-teal-soft p-5"><div class="text-xs font-semibold teal mb-2">LOREM IPSUM</div><p class="text-sm font-semibold">Dolor sit amet consectetur</p><p class="text-xs muted mt-2">adipiscing elit</p></div><div class="rounded-2xl bg-rust-soft p-5"><div class="text-xs font-semibold rust mb-2">DOLOR SIT</div><p class="text-sm font-semibold">Amet consectetur adipiscing</p><p class="text-xs muted mt-2">sed do eiusmod</p></div></div><p class="mt-6 muted leading-relaxed">Lorem ipsum: <strong class="ink">dolor sit amet; consectetur adipiscing elit.</strong></p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="flow" class="sec-head px-6 md:px-12 py-20 md:py-28 bg-[#efe9dd]">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-[.35fr_1fr] gap-8 md:gap-16 mb-14"><div><span class="section-number">02</span></div><div><p class="eyebrow mb-4">Lorem ipsum</p><h2 class="display text-5xl md:text-6xl leading-none tracking-tight">Dolor sit amet,<br>consectetur adipiscing.</h2><p class="mt-6 text-lg muted max-w-3xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p></div></div>
+        <div class="diagram-scroll">
+          <svg viewBox="0 0 1120 520" class="w-full h-auto" role="img" aria-label="Lorem ipsum dolor sit amet">
+            <defs><marker id="arrowFlow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#69736e"></path></marker></defs>
+            <rect x="18" y="42" width="210" height="110" rx="18" fill="#fcfaf5" stroke="#cfc8bb" stroke-width="2"/><text x="123" y="74" text-anchor="middle" dominant-baseline="middle" font-size="16" font-weight="700" fill="#182320">Lorem ipsum</text><text x="123" y="101" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#69736e">dolor · sit amet</text><text x="123" y="124" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#69736e">consectetur · elit</text><path d="M228 97 L300 97" stroke="#69736e" stroke-width="2" marker-end="url(#arrowFlow)"/>
+            <rect x="306" y="42" width="232" height="110" rx="18" fill="#fcfaf5" stroke="#31413d" stroke-width="2"/><text x="422" y="74" text-anchor="middle" dominant-baseline="middle" font-size="16" font-weight="700" fill="#182320">lorem/ipsum.ext</text><text x="422" y="101" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#69736e">dolor · sit · amet</text><text x="422" y="124" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#69736e">consectetur + elit</text>
+            <path d="M538 80 C600 80 600 52 654 52" fill="none" stroke="#69736e" stroke-width="2" marker-end="url(#arrowFlow)"/><path d="M538 118 C600 118 600 318 654 318" fill="none" stroke="#69736e" stroke-width="2" marker-end="url(#arrowFlow)"/>
+            <rect x="662" y="20" width="260" height="150" rx="20" fill="#d7e8e4" stroke="#2d7d78" stroke-width="2"/><text x="792" y="52" text-anchor="middle" dominant-baseline="middle" font-size="16" font-weight="700" fill="#182320">lorem_ipsum</text><text x="792" y="81" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#31413d">dolor sit amet</text><text x="792" y="110" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#31413d">consectetur · adipiscing</text><text x="792" y="133" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#31413d">elit · sed do eiusmod</text><path d="M922 95 L1000 95" stroke="#2d7d78" stroke-width="2" marker-end="url(#arrowFlow)"/><rect x="1005" y="52" width="96" height="86" rx="16" fill="#2d7d78"/><text x="1053" y="84" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="700" fill="#ffffff">Lorem</text><text x="1053" y="104" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="700" fill="#ffffff">ipsum</text>
+            <rect x="662" y="252" width="260" height="150" rx="20" fill="#f1d4c7" stroke="#bd5b36" stroke-width="2"/><text x="792" y="284" text-anchor="middle" dominant-baseline="middle" font-size="16" font-weight="700" fill="#182320">dolor_sit_amet</text><text x="792" y="313" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#31413d">consectetur adipiscing</text><text x="792" y="342" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#31413d">sed do eiusmod</text><text x="792" y="365" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#31413d">tempor incididunt</text><path d="M922 327 L1000 327" stroke="#bd5b36" stroke-width="2" marker-end="url(#arrowFlow)"/><rect x="1005" y="284" width="96" height="86" rx="16" fill="#bd5b36"/><text x="1053" y="327" text-anchor="middle" dominant-baseline="middle" font-size="15" font-weight="700" fill="#ffffff">Dolor</text>
+            <rect x="306" y="278" width="232" height="118" rx="18" fill="#fcfaf5" stroke="#cfc8bb" stroke-width="2" stroke-dasharray="7 6"/><text x="422" y="307" text-anchor="middle" dominant-baseline="middle" font-size="14" font-weight="700" fill="#182320">Lorem ipsum</text><text x="422" y="333" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#69736e">dolor sit amet</text><text x="422" y="357" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#69736e">consectetur elit</text><path d="M538 337 L654 337" stroke="#bd5b36" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#arrowFlow)"/>
+          </svg>
+        </div>
+        <div class="mt-8 grid md:grid-cols-3 gap-4"><div class="paper-card rounded-2xl p-5"><span class="text-xs font-bold teal">LOREM</span><p class="mt-2 font-semibold">Ipsum dolor</p><p class="text-sm muted mt-1">Sit amet consectetur.</p></div><div class="paper-card rounded-2xl p-5"><span class="text-xs font-bold rust">IPSUM</span><p class="mt-2 font-semibold">Dolor sit amet</p><p class="text-sm muted mt-1">Consectetur adipiscing.</p></div><div class="paper-card rounded-2xl p-5"><span class="text-xs font-bold">DOLOR</span><p class="mt-2 font-semibold">Sit amet elit</p><p class="text-sm muted mt-1">Sed do eiusmod tempor.</p></div></div>
+      </div>
+    </section>
+
+    <section id="contract" class="sec-head px-6 md:px-12 py-20 md:py-28">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-[.35fr_1fr] gap-8 md:gap-16 mb-14"><div><span class="section-number">03</span></div><div><p class="eyebrow mb-4">Lorem ipsum</p><h2 class="display text-5xl md:text-6xl leading-none tracking-tight">Dolor sit amet.</h2><p class="mt-6 text-lg muted max-w-3xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p></div></div>
+        <div class="grid lg:grid-cols-3 gap-5">
+          <article class="paper-card rounded-3xl p-6 md:p-7"><div class="w-11 h-11 rounded-full bg-[#ece7dc] grid place-items-center text-xl">↺</div><p class="eyebrow mt-6 mb-3">Lorem ipsum</p><h3 class="text-2xl font-semibold tracking-tight">Dolor sit</h3><p class="mt-3 muted text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><div class="mt-6 space-y-3 text-sm"><div class="border-t hairline pt-3"><code>lorem</code> → ipsum, dolor sit</div><div class="border-t hairline pt-3"><code>amet</code> → consectetur, elit</div></div></article>
+          <article class="paper-card rounded-3xl p-6 md:p-7" style="border-top:4px solid var(--teal)"><div class="w-11 h-11 rounded-full bg-teal-soft grid place-items-center text-xl teal">↗</div><p class="eyebrow mt-6 mb-3" style="color:var(--teal)">Lorem · ipsum</p><h3 class="text-2xl font-semibold tracking-tight">Dolor sit</h3><div class="mt-5 space-y-3 text-sm"><div><code>lorem_ipsum</code> <span class="muted">dolor</span></div><div><code>sit_amet</code> <span class="muted">consectetur</span></div><div><code>adipiscing_elit</code> <span class="muted">eiusmod</span></div><div><code>tempor_inc It</code> <span class="muted">labore</span></div></div></article>
+          <article class="paper-card rounded-3xl p-6 md:p-7" style="border-top:4px solid var(--rust)"><div class="w-11 h-11 rounded-full bg-rust-soft grid place-items-center text-xl rust">{ }</div><p class="eyebrow mt-6 mb-3">Dolor · sit amet</p><h3 class="text-2xl font-semibold tracking-tight">Consectetur elit</h3><div class="mt-5 space-y-3 text-sm"><div><code>lorem_ipsum</code> <span class="muted">dolor</span></div><div><code>sit_amet</code> <span class="muted">consectetur</span></div><div><code>adipiscing_elit</code> <span class="muted">sed do</span></div><div><code>eiusmod_tempor</code> <span class="muted">incididunt</span></div></div></article>
+        </div>
+
+        <div class="mt-12">
+          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6"><div><p class="eyebrow mb-3">Lorem ipsum</p><h3 class="text-2xl md:text-3xl font-semibold tracking-tight">Dolor sit amet consectetur</h3></div><p class="text-sm muted max-w-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p></div>
+          <div class="paper-card rounded-3xl table-wrap shadow-paper">
+            <table class="contract-table w-full text-left text-xs">
+              <thead><tr><th>Lorem</th><th>Ipsum</th><th>Dolor sit</th><th>Amet</th><th>Consectetur</th><th>Adipiscing</th><th>Elit sed do</th></tr></thead>
+              <tbody>
+                <tr><td class="font-semibold">1</td><td class="font-semibold">Lorem ipsum</td><td class="mono">/lorem/{ipsum}/dolor</td><td>Sit amet</td><td>Consectetur</td><td>Adipiscing elit</td><td class="mono">lorem, ipsum, dolor</td></tr>
+                <tr><td class="font-semibold">1</td><td class="font-semibold">Dolor sit</td><td class="mono">/amet/{consectetur}/elit</td><td>Sed do</td><td>Eiusmod</td><td>Tempor incididunt</td><td class="mono">sit, amet, consectetur</td></tr>
+                <tr><td class="font-semibold">1</td><td class="font-semibold">Consectetur elit</td><td class="mono">/adipiscing/{elit}/sed</td><td>Lorem</td><td class="teal font-semibold">Ipsum</td><td class="mono teal">lorem.ipsum.dolor</td><td class="mono">lorem, ipsum, dolor, sit, amet</td></tr>
+                <tr><td class="font-semibold">1</td><td class="font-semibold">Sed do eiusmod</td><td>Lorem ipsum</td><td>Dolor</td><td class="teal font-semibold">Sit amet</td><td class="mono teal">consectetur.adipiscing</td><td class="mono">elit, sed, do, eiusmod</td></tr>
+                <tr><td class="font-semibold">1</td><td class="font-semibold">Tempor incididunt</td><td class="mono">/labore/{et}/dolore</td><td>Ipsum</td><td class="teal font-semibold">Magna aliqua</td><td class="mono teal">ut.enim.ad.minim</td><td class="mono">veniam, quis, nostrud, exercitation</td></tr>
+                <tr><td class="font-semibold">2</td><td class="font-semibold">Ullamco laboris</td><td class="mono">/nisi/{ut}/aliquip</td><td>Dolor</td><td class="rust font-semibold">Sit amet</td><td class="mono rust">lorem_ipsum_dolor</td><td class="mono">lorem, ipsum, dolor, sit, amet, consectetur</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="mt-12 paper-card rounded-3xl p-6 md:p-8"><div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-7"><div><p class="eyebrow mb-3">Lorem ipsum</p><h3 class="text-2xl md:text-3xl font-semibold tracking-tight">Dolor sit amet consectetur</h3></div><p class="text-sm muted max-w-md">Lorem ipsum dolor sit amet. Consectetur adipiscing elit.</p></div><div class="codeblock p-5 md:p-7 mono text-xs md:text-sm leading-6 overflow-x-auto"><pre>{
+  "lorem": "ipsum_dolor",
+  "sit_amet": 1,
+  "consectetur": "adipiscing elit",
+  "sed_do": "eiusmod tempor",
+  "payload": {
+    "lorem": "ipsum",
+    "dolor": "sit amet",
+    "consectetur": "adipiscing"
+  }
+}</pre></div></div>
+      </div>
+    </section>
+
+    <section id="guardrails" class="sec-head px-6 md:px-12 py-20 md:py-28 bg-[#20302d] text-[#f7f2e8]">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-[.35fr_1fr] gap-8 md:gap-16 mb-14"><div><span class="section-number" style="color:#e78f6d">04</span></div><div><p class="eyebrow mb-4" style="color:#e78f6d">Lorem ipsum</p><h2 class="display text-5xl md:text-6xl leading-none tracking-tight">Dolor sit amet consectetur.</h2><p class="mt-6 text-lg text-[#c8d0ca] max-w-3xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p></div></div>
+        <div class="grid lg:grid-cols-4 gap-4">
+          <div class="rounded-2xl border border-[#53615d] p-5"><div class="text-2xl mb-4">01</div><h3 class="font-semibold">Lorem ipsum</h3><p class="text-sm text-[#c8d0ca] mt-2 leading-relaxed">Dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p></div>
+          <div class="rounded-2xl border border-[#53615d] p-5"><div class="text-2xl mb-4">02</div><h3 class="font-semibold">Dolor sit amet</h3><p class="text-sm text-[#c8d0ca] mt-2 leading-relaxed">Consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p></div>
+          <div class="rounded-2xl border border-[#53615d] p-5"><div class="text-2xl mb-4">03</div><h3 class="font-semibold">Consectetur elit</h3><p class="text-sm text-[#c8d0ca] mt-2 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+          <div class="rounded-2xl border border-[#53615d] p-5"><div class="text-2xl mb-4">04</div><h3 class="font-semibold">Sed do eiusmod</h3><p class="text-sm text-[#c8d0ca] mt-2 leading-relaxed">Tempor incididunt ut labore et dolore magna aliqua.</p></div>
+        </div>
+      </div>
+    </section>
+    </main>
+  </div>
+
+  <footer class="px-6 md:px-12 py-7"><div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-2 justify-between text-xs muted"><span>Lorem ipsum dolor sit amet</span><span>Consectetur adipiscing elit</span></div></footer>
+  <script>
+    const tocLinks=[...document.querySelectorAll('.toc a')];
+    const observed=[...document.querySelectorAll('.sec-head')];
+    const spy=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting){tocLinks.forEach((link)=>link.classList.toggle('active',link.getAttribute('href')==='#'+entry.target.id));const active=tocLinks.find((link)=>link.classList.contains('active'));if(active&&window.innerWidth<=1000){active.scrollIntoView({block:'nearest',inline:'center'});}}});},{rootMargin:'-10% 0px -80% 0px',threshold:0});
+    observed.forEach((section)=>spy.observe(section));
+  </script>
+</body>
+</html>

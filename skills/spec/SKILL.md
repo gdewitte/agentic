@@ -1,7 +1,7 @@
 ---
 name: spec
-description: "Write an implementation spec to docs/<feature-slug>/spec.md and pause for human review. Use when the user says \"write a spec\", \"spec this out\", \"technical design\", \"design doc\", or when a task has decisions, invariants, or contracts that should be reviewed before code is written."
-author: "https://github.com/owainlewis/"
+description: "Write an implementation spec after confirming whether it belongs in repo-local docs/specs/<feature-slug>-spec.md or private notes at an explicit user-provided path, then pause for human review. Use when the user says \"write a spec\", \"spec this out\", \"technical design\", \"design doc\", asks for a private or non-checked-in spec, or when a task has decisions, invariants, or contracts that should be reviewed before code is written."
+original_author: "https://github.com/owainlewis/"
 user-invocable: true
 argument-hint: "<feature description, context, or constraints>"
 ---
@@ -16,7 +16,11 @@ You are a principal engineer writing a technical spec for an AI agent to execute
 
 - Treat the full argument as the request unless the user names a feature.
 - Derive a kebab-case feature slug if no name is given.
-- Confirm the project root and create `docs/` if needed; ask where specs should live only if the repo uses a different docs convention.
+- Confirm the output destination before writing:
+  - If the user gives an explicit path, use it.
+  - Otherwise, ask one question: should the spec live with the existing code at `docs/specs/<feature-slug>-spec.md`, or in private notes at a specific path the user provides?
+  - Recommend repo-local for specs that should be reviewed and versioned with implementation; recommend private notes for private, personal, exploratory, or non-checked-in specs, then ask for the exact private-notes path.
+- Confirm the project root for code context. For a repo-local spec, create `docs/specs/` if needed. For a private-notes spec, create only the explicitly requested destination directory and do not create repo-local docs solely for the spec.
 - Read referenced files and relevant code so the spec fits the project as it exists.
 - Identify decisions, dependencies, invariants, contracts, and error behavior that need review before coding.
 - When the spec introduces or pins external runtimes, services, frameworks, or dependencies, check the current stable or LTS version from official sources when possible.
@@ -27,7 +31,7 @@ You are a principal engineer writing a technical spec for an AI agent to execute
 
 ### 2. Write
 
-Write `docs/<feature-slug>/spec.md` using the sections below. Tailor detail to the task: keep simple specs short, expand only where decisions, invariants, or interfaces need review.
+Write the spec to the chosen destination using the sections below. Tailor detail to the task: keep simple specs short, expand only where decisions, invariants, or interfaces need review.
 
 - **What**: one-paragraph summary.
 - **Context**: why this matters, what exists today, links to relevant code.
@@ -45,7 +49,7 @@ Write `docs/<feature-slug>/spec.md` using the sections below. Tailor detail to t
 After writing, print:
 
 ```text
-Spec written to docs/<feature-slug>/spec.md
+Spec written to <chosen-spec-path>
 Review and reply "approve" to proceed, "edit" to revise, or leave feedback.
 ```
 

@@ -1,4 +1,0 @@
-interface:
-  display_name: "Frontend Skill"
-  short_description: "Art-directed frontend pages and UI"
-  default_prompt: "Use $frontend-skill to design and build a visually strong landing page."
