@@ -8,6 +8,14 @@ If the repo includes a plan policy (e.g., `docs/PLANS.md`), this plan must follo
 
 Explain the user-visible outcome and how someone can see it working.
 
+## Source and Approval
+
+Source spec: `<path or none>`
+
+Approval state: `<approved by user / repo-required ExecPlan / pending>`
+
+List any design decisions that are not already settled in the source spec. If there are unresolved decisions that materially affect behavior, pause and get them resolved before implementation.
+
 ## Progress
 
 - [ ] (YYYY-MM-DD HH:MMZ) Initial step.

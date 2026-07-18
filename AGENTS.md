@@ -1,6 +1,6 @@
 # Working in Agentic
 
-Agentic is a personal collection of reusable agent skills. It packages clear, focused workflows for clarifying vague asks, writing design docs and specs, authoring execution plans, planning work, refactoring safely, and building polished frontend experiences.
+Agentic is a personal collection of reusable agent skills. It packages clear, focused workflows for clarifying vague asks, writing design docs and specs, authoring ExecPlans, planning work, refactoring safely, and building polished frontend experiences.
 
 If you are an AI agent working in this repo, follow this guidance.
 
@@ -10,7 +10,7 @@ Use `clarify` when a request is vague, multi-part, voice-dictated, or needs to b
 
 Use `design-doc -> spec -> plan` for changes with ambiguous architecture, tradeoffs, or cross-cutting concerns. Use `spec -> plan` for changes that touch contracts, behavior, invariants, or multiple files. Skip stages only when explicitly told to or when the change is trivial and decision-complete.
 
-Use `execplan-authoring` when a repo requires a living ExecPlan or a complex implementation plan needs to be self-contained and verifiable.
+Use `execplan` after a spec is approved when a repo requires a living ExecPlan or a complex implementation plan needs to stay self-contained, verifiable, and current. Do not use it as a substitute for `spec`.
 
 Use `refactor` when existing code or skill text needs cleanup without behavior changes. Use `commit-message` when drafting or reviewing commit messages.
 
@@ -25,7 +25,7 @@ Exploration is allowed without creating docs or issue tracker entries. Do not ma
 - `clarify`: turn a vague or messy ask into a clean, self-contained prompt.
 - `commit-message`: draft concise commit messages with a conventional header and optional structured body.
 - `design-doc`: write a lightweight architecture design doc before implementation when the design is ambiguous.
-- `execplan-authoring`: create or update self-contained ExecPlans for complex changes.
+- `execplan`: create or update living ExecPlans after an approved spec or when a repo requires one.
 - `explain-visually`: create a visual HTML explanation of a repo, spec, PR, architecture, or concept.
 - `spec`: write the technical design before coding.
 - `plan`: break a spec, brief, or request into agent-sized tasks.

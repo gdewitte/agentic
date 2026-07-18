@@ -1,6 +1,6 @@
 # Agentic
 
-> Personal agent skills for day-to-day coding, planning, clarification, refactoring, execution plans, and frontend work.
+> Personal agent skills for day-to-day coding, planning, clarification, refactoring, ExecPlans, and frontend work.
 
 ## Skills
 
@@ -9,7 +9,7 @@
 | `clarify` | Turns a vague or messy ask into a clean, self-contained prompt. | None |
 | `commit-message` | Drafts concise commit messages with a conventional header and optional structured body. | None |
 | `design-doc` | Writes a lightweight architecture design doc before implementation. | None |
-| `execplan-authoring` | Creates or updates self-contained ExecPlans for complex changes. | `frontend-skill` |
+| `execplan` | Creates or updates living ExecPlans after an approved spec or when a repo requires one. | `frontend-skill` |
 | `explain-visually` | Creates a visual HTML explanation of a repo, spec, PR, architecture, or concept. | `frontend-skill`, `uncodixfy` |
 | `spec` | Writes requirements and technical design before coding. | None |
 | `plan` | Breaks a spec, brief, or request into agent-sized tasks. | None |
