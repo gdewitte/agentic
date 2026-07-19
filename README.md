@@ -1,21 +1,31 @@
 # Agentic
 
-> Personal agent skills for day-to-day coding, planning, clarification, refactoring, ExecPlans, and frontend work.
+Personal agent skills for clarifying ambiguous work, writing specs and plans, implementing safely, refactoring, testing, reviewing, frontend polish, visual explanations, and repository harnesses.
+
+This README lists the user-facing skill interface.
 
 ## Skills
 
-| Skill | What it does | Deps |
+| Skill | Use | Works with |
 |---|---|---|
 | `clarify` | Turns a vague or messy ask into a clean, self-contained prompt. | None |
 | `commit-message` | Drafts concise commit messages with a conventional header and optional structured body. | None |
 | `design-doc` | Writes a lightweight architecture design doc before implementation. | None |
-| `execplan` | Creates or updates living ExecPlans after an approved spec or when a repo requires one. | `frontend-skill` |
 | `explain-visually` | Creates a visual HTML explanation of a repo, spec, PR, architecture, or concept. | `frontend-skill`, `uncodixfy` |
-| `spec` | Writes requirements and technical design before coding. | None |
-| `plan` | Breaks a spec, brief, or request into agent-sized tasks. | None |
-| `refactor` | Simplifies existing code without changing behavior. | None |
 | `frontend-skill` | Guides visually strong landing pages, websites, apps, prototypes, demos, and game UIs. | None |
+| `grill-me` | Runs a grilling session through an invocable wrapper. | `grilling` |
+| `harness` | Audits and improves a repo's agent instructions, commands, state, environment, and feedback loops. | None |
+| `implement` | Executes approved or decision-complete work, choosing the right implementation mode and verification path. | `tdd`; `frontend-skill`, `uncodixfy` when frontend |
+| `plan` | Breaks a spec, brief, or request into agent-sized tasks or a self-contained implementation plan. | None |
+| `refactor` | Simplifies existing code without changing behavior. | None |
+| `spec` | Writes requirements and technical design before coding. | None |
 | `uncodixfy` | Removes generic AI UI patterns from frontend work. | None |
+
+## References
+
+- [Matt Pocock skills](https://github.com/mattpocock/skills)
+- [Owain Lewis](https://github.com/owainlewis/)
+- [Uncodixfy](https://github.com/cyxzdev/Uncodixfy)
 
 ## Install
 

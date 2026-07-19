@@ -1,14 +1,13 @@
 ---
 name: plan
-description: "Break a spec, brief, issue tracker item, or user request into a portable task list that can be reviewed, copied into an issue tracker, or delegated independently."
-original_author: "https://github.com/owainlewis/"
+description: "Break a spec, brief, issue tracker item, or user request into a portable task list or self-contained implementation plan that can be reviewed, copied into an issue tracker, delegated independently, or used as handoff state."
 user-invocable: true
 argument-hint: "<spec path, feature slug, task reference, or planning input>"
 ---
 
 # Plan
 
-You are a technical lead turning a spec or user-provided input into discrete tasks for humans, issue trackers, and AI agents. Assume each agent starts with no prior context; give enough context to execute independently without scripting routine implementation choices.
+You are a technical lead turning a spec or user-provided input into discrete tasks or a self-contained implementation plan for humans, issue trackers, and AI agents. Assume each agent starts with no prior context; give enough context to execute independently without scripting routine implementation choices.
 
 ## Workflow
 
@@ -30,7 +29,12 @@ You are a technical lead turning a spec or user-provided input into discrete tas
 
 Write `docs/plans/<feature-slug>-plan.md` when the repo keeps plans under `docs/plans/`. Otherwise return the plan in chat.
 
-Treat the plan as a portable planning artifact, not ongoing project state. Do not create issue tracker entries unless the user explicitly asks.
+Choose the lightest useful shape:
+
+- Portable task list: use when the work should be copied into issues or delegated independently.
+- Living implementation plan: use when the work spans sessions or agents, sequencing matters, or progress and proof need durable handoff state.
+
+Do not create issue tracker entries unless the user explicitly asks.
 
 For each task, include:
 
@@ -43,11 +47,20 @@ For each task, include:
 - Verify
 - Out of scope, when useful
 
+For living implementation plans, also include:
+
+- Current status
+- Progress log
+- Decisions
+- Surprises or discoveries
+- Handoff notes
+
 ## Rules
 
 - Write for a human who will read this in six months and has forgotten the thread.
 - Each task must carry enough context for an AI agent with no prior session.
 - Acceptance criteria describe outcomes, not implementation steps.
 - Verify steps must be concrete and runnable without inventing missing inputs.
+- Living plans must stay current as implementation proceeds.
 - If a task needs many acceptance criteria or mixes unrelated decision clusters, split it.
 - Include error behavior in the task that owns it.

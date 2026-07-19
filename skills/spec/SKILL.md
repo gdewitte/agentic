@@ -1,7 +1,6 @@
 ---
 name: spec
 description: "Write an implementation spec after confirming whether it belongs in repo-local docs/specs/<feature-slug>-spec.md or private notes at an explicit user-provided path, then pause for human review. Use when the user says \"write a spec\", \"spec this out\", \"technical design\", \"design doc\", asks for a private or non-checked-in spec, or when a task has decisions, invariants, or contracts that should be reviewed before code is written."
-original_author: "https://github.com/owainlewis/"
 user-invocable: true
 argument-hint: "<feature description, context, or constraints>"
 ---

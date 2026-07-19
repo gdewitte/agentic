@@ -1,7 +1,6 @@
 ---
 name: refactor
 description: "Improve the shape of existing code without changing behavior."
-original_author: "https://github.com/owainlewis/"
 user-invocable: true
 argument-hint: "[optional files, diff, commit, or cleanup focus]"
 ---
